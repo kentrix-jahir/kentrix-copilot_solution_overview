@@ -151,11 +151,9 @@ analytics.
 
 | | |
 |---|---|
-| Automated tests passing | **149** |
 | Time to first word of an answer | **~1.2–3.5 seconds** |
 | Speech transcription | **~580ms**, word-accurate |
 | Product recommendation accuracy | **100%** on a 20-question benchmark of real prospect phrasing |
-| Pre-launch security audit | **Completed** — findings fixed and re-tested |
 
 That third row matters commercially: it is a standing quality check that the
 copilot still recommends the **right** product after the messaging is edited.
@@ -207,18 +205,6 @@ Phase 3 is the one with the largest commercial upside: the same advisor sitting
 **Step 5 is the one that lands with a product leader.** It demonstrates that
 the system's knowledge is owned by the business, not by engineering — and that
 a message change ships in seconds, not sprints.
-
----
-
-## 10. The decision being asked for
-
-| Ask | Detail |
-|---|---|
-| **Approve for the kentrix.ai website** | Currently demo-ready and running privately |
-| **Approve ~$7/month**, plus the paid AI tier before public launch | Low single-digit dollars per thousand conversations |
-| **Name an owner for the knowledge base** | Marketing or product marketing — this is the role that keeps it accurate |
-| **Decide on Phase 3** | The embedded in-product advisor, which is the largest opportunity here |
-
 
 ---
 
