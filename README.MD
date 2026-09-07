@@ -218,3 +218,12 @@ a message change ships in seconds, not sprints.
 | **Approve ~$7/month**, plus the paid AI tier before public launch | Low single-digit dollars per thousand conversations |
 | **Name an owner for the knowledge base** | Marketing or product marketing — this is the role that keeps it accurate |
 | **Decide on Phase 3** | The embedded in-product advisor, which is the largest opportunity here |
+
+
+---
+
+## Live Link :
+
+Copilot : https://kentrix-copilot-web.onrender.com
+
+Admin : https://kentrix-copilot-web.onrender.com/admin
