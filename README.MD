@@ -19,12 +19,16 @@ is live on the very next question, with no release and no engineering ticket.
 
 ## 2. The problem it solves
 
-Kentrix sells eight products across eleven industries. That is a genuinely
-difficult catalogue for a prospect to navigate alone.
+Kentrix sells ten products across eleven industries: four core products
+(Kentrix LSI, GeoMarketeer, Karma, Persona 360) and six purpose-built decision
+apps — StorePlannix, StorePerformix and StoreSKUMix for retail, MediaPlannix
+for media, and, added to kentrix.ai in October 2026, BranchPlannix and
+BranchPerformix for banks. That is a genuinely difficult catalogue for a
+prospect to navigate alone.
 
 | Today | With the copilot |
 |---|---|
-| A visitor lands on a product page and has to self-diagnose which of eight products fits | They describe their problem in plain language and get a reasoned recommendation |
+| A visitor lands on a product page and has to self-diagnose which of ten products fits | They describe their problem in plain language and get a reasoned recommendation |
 | High-intent visitors leave without identifying themselves | Buying intent is scored every turn; a capture form appears only once earned |
 | The sales team learns nothing about what visitors actually ask | Every question, recommendation and outcome is recorded and queryable |
 | Product messaging changes require a website release | Marketing edits it in a browser and it is live immediately |
@@ -72,6 +76,12 @@ never sees it; one who says "we want to pilot this next quarter" does.
 A password-protected admin area. Paste a new case study, save, and ask about it
 in chat — the copilot already knows. No redeploy, no engineer.
 
+On the hosted copy this is a *live* change, not yet a *permanent* one: the
+free hosting tier resets the server's disk whenever the service restarts or
+redeploys, which discards edits made in the admin area. Anything meant to last
+is also committed to the repository (a two-minute job), and it then survives
+every restart. See the risks in §7.
+
 ---
 
 ## 4. Who it is for
@@ -84,6 +94,8 @@ in chat — the copilot already knows. No redeploy, no engineer.
 | **D2C marketer** | "Our ROAS is poor, targeting is too broad" | Household-attribute targeting → **Persona 360** |
 | **Media agency** | "How do we split budget across channels and prove it worked?" | Channel mix + matched-control measurement → **MediaPlannix** |
 | **Bank analytics head** | "How do we grow wallet share in our existing base?" | Ranks the base by propensity → **Karma** |
+| **Bank branch network head** | "We want to open 40 branches in UP and Bihar next year" | Predicted deposits, ramp-up and break-even, cannibalisation of existing branches, branch format → **BranchPlannix** |
+| **Regional banking head** | "Some branches bring in far fewer deposits than others in similar towns" | Benchmarks each branch against its catchment and true peers, values each fix in deposits → **BranchPerformix** |
 | **FMCG sales ops** | "Where is our distribution whitespace?" | Whitespace and TAM → **GeoMarketeer** |
 | **Brand strategy** | "Who actually is our buyer?" | 9 lifestyle classes, 40+ archetypes → **Kentrix LSI** |
 
@@ -130,12 +142,16 @@ it refused every time.
 | AI conversation and speech-to-text | **$0** — free tiers |
 | Spoken replies | **$0** — runs on the visitor's own device |
 | Website hosting | **$0** |
-| Application hosting | **$7/month** |
-| Database | **$0** |
-| **Total** | **~$7/month** |
+| Application hosting | **$0** — Render free tier |
+| Database | **$0** — Supabase free tier |
+| **Total** | **$0/month** |
 
-The $7 buys responsiveness: the free option idles out and takes the better
-part of a minute to wake, which is unacceptable in front of a client.
+The free application tier idles out after about 15 minutes without traffic and
+then takes 30–50 seconds to wake. An uptime monitor that checks the service
+every five minutes keeps it awake (on 26 October 2026 it answered its first
+request in under a second). Render's **$7/month** plan removes the idle-out
+entirely; that is the recommended step before a high-stakes client demo or
+public traffic, and it is the only thing the money buys.
 
 At meaningful volume the first paid step lands in **low single-digit dollars
 per thousand conversations**. There is no per-seat licence and no vendor
@@ -151,9 +167,9 @@ analytics.
 
 | | |
 |---|---|
-| Time to first word of an answer | **~1.2–3.5 seconds** |
+| Time to first word of an answer | **~3–9 seconds** on the primary model, which reasons before it answers (measured 26 Oct 2026: 2.6–5.2 s in test runs, 8.9 s on the live site straight after a deploy); ~4 s when the faster backup answers |
 | Speech transcription | **~580ms**, word-accurate |
-| Product recommendation accuracy | **100%** on a 20-question benchmark of real prospect phrasing |
+| Product recommendation accuracy | **23 of 23** on a 23-question benchmark of real prospect phrasing, re-run 26 Oct 2026 after adding the banking products; the six banking and "branch" questions also went 6 of 6 on the primary model |
 
 That third row matters commercially: it is a standing quality check that the
 copilot still recommends the **right** product after the messaging is edited.
@@ -164,10 +180,13 @@ catches them before a prospect does.
 
 | Risk | Status | Mitigation |
 |---|---|---|
-| **Free-tier daily limits** | Managed | The service stays available if a provider is unavailable, and tells the visitor how long to wait rather than claiming an outage. |
+| **Free-tier daily limits** | Managed | The service stays available if a provider is unavailable, and tells the visitor how long to wait rather than claiming an outage. The same chain absorbs the primary model's own capacity errors: on 26 October 2026 Google answered "high demand, try later" and the backup model delivered the answer instead. |
 | Sustained public traffic | **Open** | Free tiers suit a demo and early traffic. Enable the paid tier before promoting this on the homepage. |
 | AI provider training on free tiers | **Open** | Enable the paid tier before handling real prospect conversations. |
 | Knowledge accuracy | Managed | Every claim traces to a published Kentrix source; the copilot is barred from inventing figures. |
+| Knowledge falls behind the website | Managed | kentrix.ai added two banking products on 13 October 2026; the copilot was updated on 26 October. Checking the site's page list for new products is part of routine upkeep. |
+| Free AI models are withdrawn without notice | Managed | Has happened three times, most recently on 26 October 2026: the backup model on OpenRouter was withdrawn by its host while still being listed. The pre-demo model check catches it, and the fix is a configuration change, not a code change. |
+| Admin edits on the hosted copy are not permanent | **Open** | The free hosting tier resets the disk on every restart. Until the knowledge base moves into the database (a scoped change), permanent content changes are committed to the repository. |
 | Admin access is a shared password | **Accepted for now** | Adequate for a demo and a small internal team. Proper per-user login (SSO) is a scoped, non-structural upgrade. |
 
 ---
@@ -195,7 +214,9 @@ Phase 3 is the one with the largest commercial upside: the same advisor sitting
 1. **Land on the page.** Cycling headline, "Talk to our AI".
 2. **Speak:** *"We run 80 QSR outlets in Maharashtra and want to open 20 more
    next year."* The answer streams back and is spoken aloud. A **StorePlannix**
-   card slides in mid-answer.
+   card slides in mid-answer. For a banking audience, say instead *"We are a
+   small finance bank and want to open 40 branches in UP and Bihar next
+   year"* — a **BranchPlannix** card appears.
 3. **Switch to the GTM brief.** Four taps produce a full one-page brief.
 4. **Click "Discuss this with AI".** The brief loads as context; ask a
    follow-up.
