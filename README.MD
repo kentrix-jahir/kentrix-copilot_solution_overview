@@ -188,7 +188,7 @@ addresses, email, phone, social links and the privacy policy.
 
 ## 5. Questions to ask it — and what you'll see
 
-Real questions, tested on 2 November 2026. Wording can be anything: the
+Real questions. Wording can be anything: the
 copilot reads the meaning, not keywords.
 
 ### 5.1 Business decisions
