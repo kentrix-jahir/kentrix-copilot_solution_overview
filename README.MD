@@ -284,9 +284,6 @@ copilot reads the meaning, not keywords.
 | Then, in English: "What data would you need from us to start?" | Switches back to English for the answer |
 | "हम 40 नई बैंक शाखाएं खोलना चाहते हैं" (typed in Hindi) | Replies in Roman-script Hinglish, recommending BranchPlannix |
 
-**Tip for the meeting:** after any answer, ask a follow-up such as "can we see
-this on our own data?" — the copilot carries the conversation forward.
-
 ---
 
 ## 6. Running cost
