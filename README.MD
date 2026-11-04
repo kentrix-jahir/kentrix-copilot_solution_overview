@@ -141,18 +141,52 @@ industry's **published Kentrix results**, and a next action.
 
 ### 4.5 Lead capture, with the conversation attached
 Every message is read for buying signals. When they are strong enough, a short
-contact form appears inside the conversation (never a pop-up), and the lead
-reaches the sales team within seconds.
+contact form appears inside the conversation (never a pop-up), and the lead is
+saved straight to the **Leads** page of the admin area.
 
 Nothing is scraped or guessed — the prospect types their own details. The
 intelligence is in *when* the form appears: someone asking "what is Kentrix?"
 never sees it; someone saying "we want to pilot this next quarter" does.
 
+**When a lead is created.** The form appears once buying signals add up: a
+clear ask — a demo or working session, the price, a pilot on their own data, a
+call with the team — together with something concrete, such as a timeline, a
+budget or the size of the business. *"We run 80 outlets — how much would it
+cost?"* brings it up; *"How much does it cost?"* on its own is simply
+answered. It works in Hinglish too (*"humari 50 dukaan hai, demo chahiye"*).
+Describing the business in the first message is context, not intent, and
+"just looking" counts against it. Tapping **Book a working session** on a
+product card opens the same form straight away, with the product noted. The
+lead is saved when the visitor submits the form: name, work email and
+company, plus an optional phone and a line on what they need.
+
 For each lead the sales team sees the **industry**, the **products the copilot
 showed**, and the **full conversation** — so the first call starts from what
 the prospect actually asked.
 
-### 4.6 Knowledge the business owns and edits
+Leads sit in the admin area under **Leads**, newest first, with the hottest
+(85%+ intent) highlighted and one filter away; one click opens a lead's
+conversation. **Export CSV** downloads the list as a spreadsheet that opens in
+Excel, ready to share with the sales team. (Instant alerts to the team, for
+example in Slack, can be switched on later as a settings change.) Once
+worked, old leads can be deleted in one step, conversation included.
+
+### 4.6 Analytics: what the market is asking
+A password-protected **Analytics** tab turns every conversation into market
+intelligence:
+
+- **At a glance:** conversations, leads, questions per conversation, how much
+  of it used voice, and answer speed.
+- **Which products the copilot recommends**, and how often — a live read of
+  demand for each product and solution.
+- **Which industries prospects come from** — banks, QSR chains, D2C brands.
+- **The most-asked questions, word for word** — the needs and objections to
+  answer on the website and in sales decks.
+
+It stays behind the password because those questions can name a company and
+its plans. After rehearsals, one click resets the numbers; leads are kept.
+
+### 4.7 Knowledge the business owns and edits
 A password-protected admin area, organised the way the business is: guidance
 used in every answer, the core products, the solutions, and the industries.
 Adding a new industry or product takes minutes — the admin area suggests where
@@ -163,14 +197,14 @@ On the hosted copy this is a *live* change, not yet a *permanent* one: the
 free hosting tier resets on every restart, so anything meant to last is also
 saved to the project's master copy (a two-minute job). See the risks in §7.
 
-### 4.7 English, Hinglish or Hindi
+### 4.8 English, Hinglish or Hindi
 The copilot answers in the language of the visitor's latest message. English
 gets English. Hinglish *or* Hindi gets simple Hinglish in Roman letters, the
 way people type it ("Kolkata mein 10 QSR outlets kholne ke liye StorePlannix
 sahi rahega"), never Devanagari. If the visitor switches back to English, so
 does the copilot. Product names and figures always stay in English.
 
-### 4.8 Smart follow-up suggestions
+### 4.9 Smart follow-up suggestions
 After each answer the copilot offers up to three next questions: one going
 deeper into the product it recommended, one asking for proof from the
 visitor's own industry ("Which banks work with Kentrix?"), and, once the
@@ -178,7 +212,7 @@ conversation is under way, one moving toward a working session ("Can we see it
 on our own data?"). It never repeats a question already asked, and offers the
 suggestions in Hinglish to a visitor writing Hinglish.
 
-### 4.9 A complete, trustworthy page
+### 4.10 A complete, trustworthy page
 Around the copilot, the page shows the brands Kentrix publishes as clients, a
 three-step "how it works", every product and solution (each with an "Ask the
 copilot" button), and a full footer with the Mumbai and Kolkata office
@@ -329,9 +363,9 @@ question without leaving the page they are on.
 6. **Build a GTM brief.** Four taps and one line of context produce a full
    one-page brief with published results; click **Download PDF** to show the
    printable version, or **Discuss this with AI** to ask a follow-up.
-7. **Open the admin area.** Show a lead with its full conversation, then paste
-   a new case study, save, and ask about it in chat. The copilot already knows
-   it.
+7. **Open the admin area.** Show a lead with its full conversation and the
+   **Analytics** tab, then paste a new case study, save, and ask about it in
+   chat. The copilot already knows it.
 
 **Step 7 is the one that lands with a business leader.** It shows that the
 system's knowledge is owned by the business, not by engineering — and that a
