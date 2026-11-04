@@ -161,7 +161,7 @@ about it: the copilot already knows.
 
 On the hosted copy this is a *live* change, not yet a *permanent* one: the
 free hosting tier resets on every restart, so anything meant to last is also
-saved to the project's master copy (a two-minute job). See the risks in §8.
+saved to the project's master copy (a two-minute job). See the risks in §7.
 
 ### 4.7 English, Hinglish or Hindi
 The copilot answers in the language of the visitor's latest message. English
@@ -255,8 +255,7 @@ this on our own data?" — the copilot carries the conversation forward.
 
 ---
 
-
-## 7. Running cost
+## 6. Running cost
 
 | Component | Cost |
 |---|---|
@@ -274,11 +273,9 @@ the extra capacity to bring more detail into each answer.
 The free hosting tier sleeps after about 15 minutes without traffic and then
 takes 30–50 seconds to wake. An uptime check every five minutes keeps it awake.
 
-
-
 ---
 
-## 8. Current status
+## 7. Current status
 
 **Working and verified end to end:** chat, voice in and out, product cards,
 GTM briefs, lead capture with the conversation attached, industry knowledge
@@ -290,8 +287,6 @@ prospects come from).
 | Time to first word of an answer | **~3–9 seconds** on the main AI model, which thinks before it answers; ~4 seconds when the faster backup answers |
 | Speech transcription | **~0.6 seconds**, word-accurate |
 | Recommendation accuracy | **27 of 27** on a benchmark of real prospect questions, re-run on 2 November 2026 after the knowledge update, including four industry-led questions |
-
-
 
 ### Honest risks
 
@@ -308,7 +303,7 @@ prospects come from).
 
 ---
 
-## 9. Where this goes next
+## 8. Where this goes next
 
 **A floating chat bubble on kentrix.ai.** The same copilot, one click away in
 the corner of every page of kentrix.ai, with voice, so every visitor can ask a
@@ -316,7 +311,7 @@ question without leaving the page they are on.
 
 ---
 
-## 10. The demo, in six minutes
+## 9. The demo, in six minutes
 
 1. **Land on the page.** Cycling headline, the headline numbers, "Talk to our AI".
 2. **Speak:** *"We run 80 QSR outlets in Maharashtra and want to open 20 more
