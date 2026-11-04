@@ -364,10 +364,6 @@ question without leaving the page they are on.
    **Analytics** tab, then paste a new case study, save, and ask about it in
    chat. The copilot already knows it.
 
-**Step 7 is the one that lands with a business leader.** It shows that the
-system's knowledge is owned by the business, not by engineering — and that a
-message change ships in seconds, not sprints.
-
 ---
 
 ## Live links
