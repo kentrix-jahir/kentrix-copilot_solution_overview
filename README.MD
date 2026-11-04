@@ -255,40 +255,6 @@ this on our own data?" — the copilot carries the conversation forward.
 
 ---
 
-## 6. How it holds up in front of a client
-
-**The knowledge is owned by the business.** Product messaging, proof points,
-client names and objection handling are maintained by the team, not by
-engineering. When the message changes, the change is live immediately.
-
-**It never shows an error.** Whatever happens behind the scenes, the visitor
-still gets a useful, on-brand answer and a route to the sales team. **A demo
-cannot break in front of a client** — that is a design requirement, not an
-aspiration.
-
-**It does not invent things.** It states only figures and client facts that
-Kentrix has published, and never pricing or contract terms. On 2 November 2026
-it was tested with off-topic questions, a request for private individuals'
-phone numbers, a request to compare itself with a competitor, a pricing
-question, and an attempt to make it abandon its role: each was handled as
-described in §5.
-
-### 6.1 Data & privacy posture
-
-| Concern | Position |
-|---|---|
-| Prospect details | Captured leads go to our database and the sales team. **They are never sent to an AI model.** |
-| Voice recordings | Held only for the moment it takes to transcribe; never stored. |
-| Records | Message contents are never written to system logs; emails and phone numbers are masked. |
-| Who can see leads | Password-protected, as is analytics — it shows what prospects asked, word for word, which is commercially sensitive. |
-| Manipulation | A visitor cannot talk the copilot out of its role or its rules. Tested repeatedly. |
-| Spam and duplicates | Automated form-filling bots are quietly ignored, and the same person submitting twice becomes one lead, not two. |
-| Data sent to the sales team | Lead details are cleaned so they cannot trigger anything in Slack or run as formulas when the lead list is opened in Excel. |
-| The website itself | It only runs Kentrix's own code (a browser-enforced rule), and oversized or malformed requests are refused before they can slow the service. |
-| Security review | An independent pre-launch audit has been completed. |
-| AI provider terms | On free tiers, AI providers may use conversations to improve their products. Acceptable for public product marketing; **the paid tier should be switched on before this handles real prospect conversations at scale** — a settings change, not a rebuild. |
-
----
 
 ## 7. Running cost
 
@@ -296,7 +262,6 @@ described in §5.
 |---|---|
 | AI conversation and speech-to-text | **$0** — free tiers |
 | Spoken replies | **$0** — runs on the visitor's own device |
-| Website hosting | **$0** |
 | Application hosting | **$0** — Render free tier |
 | Database | **$0** — Supabase free tier |
 | **Total** | **$0/month** |
@@ -308,11 +273,8 @@ the extra capacity to bring more detail into each answer.
 
 The free hosting tier sleeps after about 15 minutes without traffic and then
 takes 30–50 seconds to wake. An uptime check every five minutes keeps it awake.
-Render's **$7/month** plan removes the sleep entirely — the recommended step
-before a high-stakes client demo or public traffic.
 
-At real volume, the first paid step costs **low single-digit dollars per
-thousand conversations**. There is no per-seat licence and no vendor contract.
+
 
 ---
 
@@ -329,23 +291,7 @@ prospects come from).
 | Speech transcription | **~0.6 seconds**, word-accurate |
 | Recommendation accuracy | **27 of 27** on a benchmark of real prospect questions, re-run on 2 November 2026 after the knowledge update, including four industry-led questions |
 
-The last row matters commercially. It is a standing quality check that the
-copilot still recommends the **right** product after the messaging changes —
-wrong recommendations are the failure nobody would otherwise notice, and this
-catches them before a prospect does.
 
-**Updated on 2 November 2026:** the copilot was brought fully in line with
-kentrix.ai — the four-products-plus-six-solutions structure, the eight
-industry pages, the published client list and case studies, and the homepage
-figures. Leads now carry their conversation, and the admin area is organised
-by products, solutions and industries.
-
-**Updated on 3 November 2026:** Hinglish and Hindi handled properly (replies
-in Roman-script Hinglish, switching back to English with the visitor); smart
-follow-up suggestions; a GTM brief with the prospect's own context, published
-results and a clean PDF; a fuller page with offices, contacts and a product
-overview; and a security review with fixes (details in the risks below and in
-the data & privacy table).
 
 ### Honest risks
 
