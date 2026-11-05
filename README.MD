@@ -108,9 +108,9 @@ recommends, asks one clarifying question when the need is unclear, and ends
 with a question or a concrete next step.
 
 ### 4.2 Voice, both directions
-Speak a question, hear the answer. Talking over the copilot stops it
-immediately, the way a real conversation works. Everything also works from the
-keyboard.
+Speak a question, hear the answer. Tapping **Stop** silences it immediately,
+mid-word, and asking something new stops the old answer. Everything also works
+from the keyboard.
 
 The spoken voice is free: the copilot uses the natural-sounding voices built
 into Chrome and Edge, prefers an Indian English voice, and lets the visitor
@@ -149,16 +149,20 @@ intelligence is in *when* the form appears: someone asking "what is Kentrix?"
 never sees it; someone saying "we want to pilot this next quarter" does.
 
 **When a lead is created.** The form appears once buying signals add up: a
-clear ask — a demo or working session, the price, a pilot on their own data, a
-call with the team — together with something concrete, such as a timeline, a
-budget or the size of the business. *"We run 80 outlets — how much would it
-cost?"* brings it up; *"How much does it cost?"* on its own is simply
-answered. It works in Hinglish too (*"humari 50 dukaan hai, demo chahiye"*).
-Describing the business in the first message is context, not intent, and
-"just looking" counts against it. Tapping **Book a working session** on a
-product card opens the same form straight away, with the product noted. The
-lead is saved when the visitor submits the form: name, work email and
-company, plus an optional phone and a line on what they need.
+clear ask — the price, a pilot on their own data — together with something
+concrete, such as a timeline, a budget or the size of the business. *"We run
+80 outlets — how much would it cost?"* brings it up; *"How much does it
+cost?"* on its own is simply answered. Asking for the team — a call, a demo,
+a working session, or a simple "yes" when the copilot offers one — brings it
+up straight away. It works in Hinglish too (*"humari 50 dukaan hai, demo
+chahiye"*). Describing the business in the first message is context, not
+intent, and "just looking" counts against it. Tapping **Book a working
+session** on a product card opens the same form straight away, with the
+product noted. The lead is saved when the visitor submits the form: name,
+work email and company, plus an optional phone and a line on what they need.
+The copilot never asks for these in the chat; if a visitor types an email or
+phone number there anyway, it is kept from the AI and the form opens already
+filled in.
 
 For each lead the sales team sees the **industry**, the **products the copilot
 showed**, and the **full conversation** — so the first call starts from what
@@ -175,8 +179,9 @@ worked, old leads can be deleted in one step, conversation included.
 A password-protected **Analytics** tab turns every conversation into market
 intelligence:
 
-- **At a glance:** conversations, leads, questions per conversation, how much
-  of it used voice, and answer speed.
+- **At a glance:** conversations, leads and the share of conversations that
+  became one, questions per conversation, how much of it used voice, and
+  answer speed.
 - **Which products the copilot recommends**, and how often — a live read of
   demand for each product and solution.
 - **Which industries prospects come from** — banks, QSR chains, D2C brands.
@@ -284,6 +289,9 @@ copilot reads the meaning, not keywords.
 | Then, in English: "What data would you need from us to start?" | Switches back to English for the answer |
 | "हम 40 नई बैंक शाखाएं खोलना चाहते हैं" (typed in Hindi) | Replies in Roman-script Hinglish, recommending BranchPlannix |
 
+**Tip for the meeting:** after any answer, ask a follow-up such as "can we see
+this on our own data?" — the copilot carries the conversation forward.
+
 ---
 
 ## 6. Running cost
@@ -363,6 +371,10 @@ question without leaving the page they are on.
 7. **Open the admin area.** Show a lead with its full conversation and the
    **Analytics** tab, then paste a new case study, save, and ask about it in
    chat. The copilot already knows it.
+
+**Step 7 is the one that lands with a business leader.** It shows that the
+system's knowledge is owned by the business, not by engineering — and that a
+message change ships in seconds, not sprints.
 
 ---
 
